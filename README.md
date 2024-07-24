@@ -28,8 +28,10 @@ The famous Fenton-Wilkinson approximation assumes that the first and second mome
 
 **INPUT**
 * distributions (scipy.stats.lognorm)
+
 **OUTPUT**
 * approximated lognormal distribution (scipy.stats.lognorm)
+
 **USAGE**
 * from Approximation import FentonWilkinson
 * distribution1 = lognormal(1,2)
@@ -39,10 +41,13 @@ The famous Fenton-Wilkinson approximation assumes that the first and second mome
 ### Schwartz-Yeh Approximation (with table)
 (2) Schwartz, S. C., & Yeh, Y. S. (1982). On the distribution function and moments of power sums with log‐normal components. *Bell System Technical Journal, 61(7)*, 1441-1462.
 Famous Schwartz-Yeh approximation focuses on exact expressions for the moments with two components. An iterative approach is used when there are more than two components. While calculating the moments of the log of summed random variables, the expressions become two-parameter functions. Therefore, Schwartz and Yeh also provided two tables for a certain range of Gaussian random variable values to facilitate the calculation of the output of related functions without complex limit and convergence analysis. This function allows lognormal distributions from the **scipy.stats** package. It returns a **scipy.stats.lognorm** object, which represents the Schwartz-Yeh approximated distribution for the summation of the given distributions.
+
 **INPUT**
 * distributions (scipy.stats.lognorm)
+
 **OUTPUT**
 * approximated lognormal distribution (scipy.stats.lognorm)
+
 **USAGE**
 * from Approximation import SchwartzYeh_tabular
 * distribution1 = lognormal(1,2)
@@ -51,10 +56,13 @@ Famous Schwartz-Yeh approximation focuses on exact expressions for the moments w
 * approximated_distribution = SchwartzYeh_tabular(distribution1, distribution2, ...)
 ### Sum of Normal Distributions
 Even though, the sum of normal distributions is an easy task, we provided this function to ensure the completeness of the package. 
+
 **INPUT**
 * distributions (scipy.stats.norm)
+
 **OUTPUT**
 * approximated lognormal distribution (scipy.stats.norm)
+
 **USAGE**
 * from Approximation import sumNormalDistributions
 * distribution1 = normal(1,2)
@@ -63,10 +71,13 @@ Even though, the sum of normal distributions is an easy task, we provided this f
 * summed_distribution = sumNormalDistributions(distribution1, distribution2, ...)
 ### Subtraction of Two Normal Distributions
 The same summation approach is used when targeting the subtraction of two normally distributed random variables, with the simple assumption of multiplying the subtracted distribution by -1.
+
 **INPUT**
 * distributions (scipy.stats.norm)
+
 **OUTPUT**
 * approximated lognormal distribution (scipy.stats.norm)
+
 **USAGE**
 * from Approximation import subtractNormalDistributions
 * diminishing_distribution = normal(1,2)
@@ -75,11 +86,14 @@ The same summation approach is used when targeting the subtraction of two normal
 * subtracted_distribution = subtractNormalDistributions(diminishing_distribution, subtracted_distribution)
 ### CreateRandomSumDistributions
 This function provides a sample for the summation of random variables originating from the given distributions.
+
 **INPUT**
 * distributions (scipy.stats._distn_infrastructure.rv_continuous_frozen)
 * size: number of points to be created
+
 **OUTPUT**
 * a python list that contains sample for the summation of input distributions
+
 **USAGE**
 * from Approximation import CreateRandomSumDistributions
 * dist1 = norm(1,2)
