@@ -10,7 +10,6 @@ The aim is to extend the package with methods from the literature that approxima
 ## Install
 ### Dependencies
 1. __*scipy*__ package is utilized to define the distributions.
-1. __*math*__ package is required for the calculations.
 1. __*random*__ package is used to generate random samples.
 ### User installation
 * pip install Approximation
@@ -40,6 +39,7 @@ The famous Fenton-Wilkinson approximation assumes that the first and second mome
 * approximated_distribution = FentonWilkinson(distribution1, distribution2, ...)
 ### Schwartz-Yeh Approximation (with table)
 (2) Schwartz, S. C., & Yeh, Y. S. (1982). On the distribution function and moments of power sums with log‐normal components. *Bell System Technical Journal, 61(7)*, 1441-1462.
+
 Famous Schwartz-Yeh approximation focuses on exact expressions for the moments with two components. An iterative approach is used when there are more than two components. While calculating the moments of the log of summed random variables, the expressions become two-parameter functions. Therefore, Schwartz and Yeh also provided two tables for a certain range of Gaussian random variable values to facilitate the calculation of the output of related functions without complex limit and convergence analysis. This function allows lognormal distributions from the **scipy.stats** package. It returns a **scipy.stats.lognorm** object, which represents the Schwartz-Yeh approximated distribution for the summation of the given distributions.
 
 **INPUT**
